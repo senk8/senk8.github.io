@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+h1{
+    /*\how to display figures */
+    margin: 0;
+    padding: 10px;
+    background-color: #49d868;
+    /*box-shadow: 0 0 5px rgba(0,0,0,.5);
+
+    /*\how to display texts */
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    color: #fff;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    color: #aaa;
+}
+
+.profile{
+    text-align: center;
+}
+
+.activity{
+    text-align: center;
+}
+
+.content{
+    height: 1000px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.descryption{
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.btn-3d
+{
+    box-shadow: 0 0 5px rgba(0,0,0,5);
+}
+
+img
+{
+    width: 60px;
+    height: 60px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.hatena
+{
+    width: 0px;
+    height: 90px;
+}
+
+img:hover
+{
+    opacity: .5;
+}

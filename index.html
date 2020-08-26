@@ -1,1 +1,191 @@
-under construction
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホームページ - SenK</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="background" style="background-color: #ddd;">
+    <header>
+        <h1>SenK Home Page</h1>
+    </header>
+    <div id="app">
+        <router-link to="/">Home</router-link>
+        <router-link to="/Profile">Go to Profile</router-link>
+        <router-view></router-view>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+/*
+        const Top = { 
+            template: ` 
+                <div class="top">
+                    <h2> Top {{ $route.params.userId}}</h2>
+                    <router-view></router-view>
+                </div>
+            `
+        }
+
+        const Profile = {
+            template: ` 
+                <div class="profile">
+                    <h2> Profile </h2>
+                </div>
+            `
+        }
+
+        const Hoby = {
+            template: ` 
+                <div class="profile">
+                    <h2> Hoby </h2>
+                </div>
+            `
+        }
+
+        const Contact = { template : "<div>Contact {{ $route.params.userId }}</div>"}
+        
+        const router = new VueRouter({
+            routes: [
+             {
+                path: "/",
+                alias: "/top",
+                component: Contact
+             },
+             {
+                path: "/top",
+                redirect: { name: "contact"},
+                children: [
+                    {
+                        path: 'profile',
+                        component: Profile
+                    },
+                    {
+                        path: 'hoby',
+                        componet: Hoby
+                    }
+                ],
+                component: Top
+             },
+             {
+                path: "/contact/:userId",
+                name: 'contact',
+                component: Contact
+             }
+            ]
+        })
+
+        const app = new Vue({
+            router: router
+        }).$mount("#app")
+*/
+        const Top = { 
+            template: ` 
+                <div class="top">
+                    <h2> Hello! </h2>
+                </div>
+            `
+        }
+
+        const Profile = {
+            template: ` 
+                <div class="profile">
+                    <h2> Profile </h2>
+                </div>
+            `
+        }
+
+        const router = new VueRouter({
+            routes: [
+             {
+                path: "/",
+                component: Top
+             },
+             {
+                path: "/Profile",
+                component: Profile
+             },
+             {
+                path: "/Activity",
+                cimponent: Profile
+             }
+            ]
+        })
+        
+        const app = new Vue({
+            router: router,
+            data:{
+                text:"hoge"
+            }
+        }).$mount("#app")
+    </script>
+<!--
+    <div class="container content">
+        <a href="https://twitter.com/enkanakoi?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+            data-show-count="false">Follow @enkanakoi</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="profile" id="profile">
+            <h2>Profile</h2>
+            <hr>
+            <ul>
+                <li class="descryption" v-for="profile in profiles">{{ profile }}</li>
+            </ul>
+            <hr>
+        </div>
+        <div class="activity">
+            <h2>Activity</h2>
+            <hr>
+            <button class="btn btn-success btn-3d"
+                onclick="location.href='https://twitter.com/enkanakoi'">Twitter</button>
+            <button class="btn btn-success btn-3d" onclick="location.href='https://github.com/senk8'">GitHub</button>
+            <button class="btn btn-success btn-3d" onclick="location.href='https://qiita.com/SenK'">Qiita</button>
+            <button class="btn btn-success btn-3d" onclick="location.href='https://tenn.hateblo.jp/'">はてなブログ</button>
+            <button class="btn btn-success btn-3d"
+                onclick="location.href='https://atcoder.jp/users/Tenn'">AtCoder</button>
+            <button class="btn btn-success btn-3d"
+                onclick="location.href='https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=204924&item_no=1&page_id=13&block_id=8'">学会発表</button>
+        </div>
+        <div class="activity">
+            <ul class="follow-me">
+                <li><a href='https://atcoder.jp/users/Tenn'></a></li>
+                <li><a href='https://twitter.com/enkanakoi' class="twitter"></a></li>
+                <li><a href='https://github.com/senk8'></a></li>
+                <li><a href='https://tenn.hateblo.jp/'></a></li>
+                <li><a href='https://qiita.com/SenK'></a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="activity" id="activity">
+            <h2>Hobby</h2>
+            <ul>
+                <li class="descryption" v-for="hobby in hobbys">{{hobby}}</li>
+            </ul>
+            <hr>
+        </div>
+        <script src="js/home.js"></script>
+        <i class="fab fa-twitter-square fa-5x" ></i>
+        <i class="fab fa-github-square fa-5x"></i>  
+        <img src="images/favicon.png" alt="Qiita">
+        <img src="images/Twitter_Social_Icon_Circle_Color.png" alt="Twitter">
+        <img src="images/GitHub-Mark-120px-plus.png" alt="GitHub">
+        <img src="images/hatenablog-logo.svg" alt="Hatena Blog" class="hatena">
+    </div>
+-->
+    <footer>
+        <h1> 上に戻る</h1>
+    </footer>
+</body>
+
+</html>
