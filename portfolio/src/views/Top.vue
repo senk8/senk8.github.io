@@ -1,5 +1,8 @@
 <template>
-    <v-container id="'#Top'">
+    <v-container id="top">
+      <div class="block text-center">
+      <h1>Welcome to Senk's home page!! </h1>
+      </div>
     </v-container>
 </template>
 
@@ -11,21 +14,11 @@ export default {
   }),
   components:{
   },
-  methods:{
-    linkByClick(i){
-      if(i===0){
-
-      }else if(i===1){
-
-      }
-    },
-  },
 }
 </script>
 
 <style scoped>
 .block {
   height: 1000px;
-  background-color: red;
 }
 </style>

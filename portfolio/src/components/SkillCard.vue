@@ -1,9 +1,8 @@
 <template>
-  <div class="SkillCard">
-    <v-card max-width="30%">
+    <v-card flat>
       <v-card-title>{{language}}</v-card-title>
       <v-card-text>
-        <p>{{ descryption }}</p>
+        <p>{{ description }}</p>
         <v-rating
           :value="rating"
           color="yellow darken-3"
@@ -14,12 +13,15 @@
         ></v-rating> 
       </v-card-text>
     </v-card>
-  </div>
 </template>
 
 <script>
 export default {
   name: "SkillCard",
-  props: ["language","rating","descryption"]
+  props: {
+    language:"",
+    rating:"",
+    description:"",
+  }
 }
 </script>

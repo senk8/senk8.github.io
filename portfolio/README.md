@@ -1,4 +1,4 @@
-# vue-home-project
+# portfolio
 
 ## Project setup
 ```

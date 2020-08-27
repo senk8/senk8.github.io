@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-import vue_scrollto from './plugins/vue_scrollto';
+import vuescrollto from './plugins/vue-scrollto';
 
 
 Vue.config.productionTip = false
@@ -11,6 +11,6 @@ new Vue({
   router,
   store,
   vuetify,
-  vue_scrollto,
+  vuescrollto,
   render: h => h(App)
 }).$mount('#app')
