@@ -1,14 +1,19 @@
 <template>
       <v-card flat>
-        <v-card-title class="white--text light-green lighten-1">
-          <h3 class="display-1 font-weight-light">[{{term}}] {{ name }}</h3>
-        </v-card-title>
+        <v-card-text 
+        class="text-center text-xl-h4 text-lg-h4 text-md-h4 text-sm-h6 text-h6"
+        >
+        {{ term }}<br/>
+        {{ name }}
+        </v-card-text>
+
         <v-container>
           <v-row>
             <v-col
               cols="12"
+              class="text-center text-xl-h6 text-lg-h6 text-md-h6 text-sm-caption text-caption"
             >
-                {{ descryption }} 
+                {{ description }} 
             </v-col>
           </v-row>
         </v-container>
@@ -23,15 +28,11 @@ export default {
   props: {
     name:"",
     term:"",
-    descryption:""
+    description:""
   },
 }
 </script>
 
 <style scoped>
-.card-desc{
-    font-size: 10px;
-    color:#a6f183;
-}
 
 </style>

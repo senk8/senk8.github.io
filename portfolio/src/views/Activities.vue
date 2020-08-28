@@ -1,17 +1,13 @@
 <template>
   <SectionFrame :id="id" :subtitle="subtitle" :text="text">
-  <v-sheet
-    class="pa-12"
-    color="grey lighten-3"
-  >
-  <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+  <v-timeline class="pa-12" :dense="$vuetify.breakpoint.smAndDown">
     <v-timeline-item
       color="light-blue lighten-3"
       fill-dot
       left
     >
       <FadeIn>
-      <TimeCard :name="activity[0].name" :term="activity[0].term" :descryption="activity[0].descryption" />
+      <TimeCard :name="activity[0].name" :term="activity[0].term" :description="activity[0].description" />
       </FadeIn>
     </v-timeline-item>
 
@@ -21,7 +17,7 @@
       right
     >
       <FadeIn>
-      <TimeCard :name="activity[1].name" :term="activity[1].term" :descryption="activity[1].descryption" />
+      <TimeCard :name="activity[1].name" :term="activity[1].term" :description="activity[1].description" />
       </FadeIn>
     </v-timeline-item>
 
@@ -31,7 +27,7 @@
       left
     >
       <FadeIn>
-      <TimeCard :name="activity[2].name" :term="activity[2].term" :descryption="activity[2].descryption" />
+      <TimeCard :name="activity[2].name" :term="activity[2].term" :description="activity[2].description" />
       </FadeIn>
     </v-timeline-item>
 
@@ -40,7 +36,7 @@
       fill-dot
       right
     >
-      <TimeCard :name="activity[3].name" :term="activity[3].term" :descryption="activity[3].descryption" />
+      <TimeCard :name="activity[3].name" :term="activity[3].term" :description="activity[3].description" />
     </v-timeline-item>
     <v-timeline-item
       color="light-green lighten-3"
@@ -48,11 +44,10 @@
       left
     >
       <FadeIn>
-      <TimeCard :name="activity[4].name" :term="activity[4].term" :descryption="activity[4].descryption" />
+      <TimeCard :name="activity[4].name" :term="activity[4].term" :description="activity[4].description" />
       </FadeIn>
     </v-timeline-item>
   </v-timeline>
-  </v-sheet>
   </SectionFrame>
 </template>
 
@@ -66,13 +61,41 @@ export default {
   data: () => ({
     id:"activities",
     subtitle:"Activities",
-    text:"下記のような活動の他に競技プログラミングや、はてなブログ・Qiitaでの技術記事の執筆を行っています。",
+    text:`下記のような活動の他に競技プログラミングや、
+          はてなブログ・Qiitaでの技術記事の執筆を行っています。`,
+ 
     activity:[
-      {name:"GBC",term:"2017/09~",descryption:"学生団体で学部の課題解決活動"},
-      {name:"株式会社CSD",term:"2018/08",descryption:"画面設計、HTML/CSSによる画面作成"},
-      {name:"EAGLYS株式会社",term:"2019/10~",descryption:"秘密算システムの開発"},
-      {name:"第127回プログラミング研究発表会",term:"2020/01",descryption:"学会発表"},
-      {name:"株式会社いい生活",term:"2020/08",descryption:"Vue.jsを用いたチーム開発"},
+      {
+        name:"GBC",
+        term:"2017/09~",
+        description:
+          `学生団体で学部の課題解決活動を行っていしまた。
+           現在は大学院生として学部生に助言をする立場です。`
+      },
+      {
+        name:"株式会社CSDインターン",
+        term:"2018/08",
+        description:
+          `画面設計やHTML/CSSによる画面作成を行いました。`
+      },
+      {
+        name:"EAGLYS株式会社インターン",
+        term:"2019/10~",
+        description:
+          `秘密計算システムの開発を行っています。`
+      },
+      {
+        name:"第127回プログラミング研究発表会",
+        term:"2020/01",
+        description:
+          `卒業研究の内容を学会発表しました。https://sigpro.ipsj.or.jp/pro2019-4/ より確認できます.`
+      },
+      {
+        name:"株式会社いい生活サマーインターン",
+        term:"2020/08",
+        description:
+          `Vue.jsを用いて不動産紹介ページをチーム開発しました。`
+      },
     ]
   }),
   components: {

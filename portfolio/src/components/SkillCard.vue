@@ -1,16 +1,15 @@
 <template>
-    <v-card flat>
-      <v-card-title>{{language}}</v-card-title>
+    <v-card 
+    flat 
+    outlined 
+    class="text-center">
+      <v-card-text class="text-h4">
+      <v-icon>{{ icon_name }}</v-icon>
+      {{language}}
+      </v-card-text>
+      <v-divider />
       <v-card-text>
         <p>{{ description }}</p>
-        <v-rating
-          :value="rating"
-          color="yellow darken-3"
-          background-color="grey darken-1"
-          empty-icon="$ratingFull"
-          half-increments
-          readonly
-        ></v-rating> 
       </v-card-text>
     </v-card>
 </template>
@@ -20,8 +19,8 @@ export default {
   name: "SkillCard",
   props: {
     language:"",
-    rating:"",
     description:"",
+    icon_name:"",
   }
 }
 </script>

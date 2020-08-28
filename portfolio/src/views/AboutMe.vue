@@ -1,12 +1,16 @@
 <template>
   <SectionFrame :id="id" :subtitle="subtitle" :text="text">
-    <v-sheet
-    class="pa-12"
-    color="grey lighten-3"
-    >
     <FadeIn>
-    <v-card color="grey lighten-3" flat>
-      <v-col cols="12" offset-md="6" md="6">
+      <v-row cols="12">
+      <v-col 
+      align-self="center"
+      cols="4" 
+      offset="2" >
+      <v-img
+        src="@/assets/prof.jpg"
+      ></v-img>
+      </v-col>
+      <v-col cols="6" md="6">
       <v-card-text class="text-caption">
         <p class="text-h6">
           名前:{{name}}
@@ -23,11 +27,13 @@
         <p>
           研究:{{theme}}
         </p>
+        <p>
+          関連リンクはページ最下にあります。          
+        </p>
       </v-card-text>
       </v-col>
-    </v-card>
+    </v-row>
     </FadeIn>
-    </v-sheet>
   </SectionFrame>
 </template>
 
@@ -40,13 +46,13 @@ export default {
   name: 'AboutMe',
   data: () => ({
     id:"aboutme",
-    subtitle:"Aboutme",
+    subtitle:"About Me",
     text:"",
     name:"佐藤開智",
     university:"法政大学大学院修士一年",
     labo:"尾花研究室",
     major:"情報科学",
-    theme:"マルチパーティ計算/プライバシー保護データマイニング",
+    theme:"マルチパーティ計算/秘密計算",
   }),
   components:{
     SectionFrame,

@@ -1,9 +1,9 @@
 <template>
-    <v-container id="top">
-      <div class="block text-center">
-      <h1>Welcome to Senk's home page!! </h1>
-      </div>
-    </v-container>
+    <div id="top" class="title">
+      <v-col class="white--text text-center">
+      <h1 class="welcome">Welcome to SenK's Portfolio!! </h1>
+      </v-col>
+    </div>
 </template>
 
 <script>
@@ -18,7 +18,13 @@ export default {
 </script>
 
 <style scoped>
-.block {
-  height: 1000px;
-}
+  .title{
+    height: 10%;
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .welcome{
+    margin:10% 0 10% 0;
+  }
 </style>

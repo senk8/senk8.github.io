@@ -1,5 +1,22 @@
 <template>
 <SectionFrame :id="id" :subtitle="subtitle" :text="text">
+     <v-row cols="12">
+      <v-col cols="6">
+      <v-card-text>
+
+        <span class="mx-4" :key="i" v-for="(social,i) in socials" >
+            <v-btn  icon :href="social.url">
+                <v-icon color="grey" x-large>{{ social.icon }}</v-icon>
+            </v-btn>
+        </span>
+      </v-card-text>
+      </v-col>
+      <v-col cols="6">
+      <v-card-text class="text-center white--text">
+      </v-card-text>
+      </v-col>
+      </v-row>
+<!--
   <v-sheet
     class="pa-12"
     color="grey lighten-3"
@@ -47,6 +64,7 @@
     </v-col>
   </v-card>
   </v-sheet>
+-->
 </SectionFrame>
 </template>
 
@@ -59,7 +77,10 @@ export default {
   data: () => ({
     id:"contact",
     subtitle:"Contact",
-    text:"ご連絡がございましたら、下記フォームよりお願いいたします。",
+    text:"ご連絡がございましたら、下記e-mailにお願いいたします。",
+    socials:[{icon:"mdi-twitter",url:"https://mobile.twitter.com/enkanakoi"},
+            {icon:"mdi-github",url:"https://github.com/senk8"}
+    ],
   }),
   components:{
     FadeIn,

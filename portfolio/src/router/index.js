@@ -24,22 +24,28 @@ Vue.use(VueRouter)
       name: 'Activities',
       component: () => import('../views/Activities.vue')
     },
+    /*
     {
-      path: '/Products',
+      path: '/products',
       name: 'Products',
-      component: () => import('../views/SkillSet.vue')
+      component: () => import('../views/Products.vue')
     },
     {
-      path: '/contact',
-      name: 'Contact',
-      component: () => import('../views/Contact.vue')
-    }
+      path: '/posts',
+      name: 'Posts',
+      component: () => import('../views/Products.vue')
+    },
+    */ 
+ 
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  } 
 })
 
 export default router

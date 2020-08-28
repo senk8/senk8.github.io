@@ -1,7 +1,7 @@
 <template>
   <v-container :id="id">
   <v-col>
-  <v-subheader class="text-h3 my-4">{{ subtitle }}</v-subheader>
+  <v-subheader class="text-h3 my-4 text-decoration-underline">{{ subtitle }}</v-subheader>
   </v-col>
   <v-col>
     <p class="text-center">{{ text }}</p>
@@ -20,3 +20,6 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+</style>

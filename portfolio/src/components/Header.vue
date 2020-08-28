@@ -1,49 +1,104 @@
 <template>
+  <div>
     <div>
     <v-app-bar
-      app
-      color="light-green darken-1"
+      flat
+      fixed
+      color="light-green"
       dark
     >
+        <v-app-bar-nav-icon :class="smartphone" @click.stop="showList()"/>
+        
         <v-tabs 
-        centered 
+        light-green
         icons-and-text
+        centered
         >
-          <v-tab v-scroll-to="'#top'" href="#">
-            Top
-            <v-icon>mdi-home</v-icon>
+          <div :class="pc">
+          <v-tab v-for="info in tabInfo" :key="info.to_id" v-scroll-to="info.to_id" :href="info.url">
+            {{ info.subtitle }}
+            <v-icon>{{ info.icon }}</v-icon>
           </v-tab>
-          <v-tab v-scroll-to="'#aboutme'" href="#aboutme">
-            About me
-            <v-icon>mdi-account</v-icon>
-          </v-tab>
-          <v-tab v-scroll-to="'#skillset'" href="#skillset">
-            Skill Set
-            <v-icon>mdi-monitor</v-icon>
-          </v-tab>
-          <v-tab v-scroll-to="'#activities'" href="#activities">
-            Activity
-            <v-icon>mdi-account-multiple</v-icon>
-          </v-tab>
-          <v-tab v-scroll-to="'#contact'" href="#contact">
-            Contact
-            <v-icon>mdi-chat</v-icon>
-          </v-tab>
-          <!--
-          <v-tab v-scroll-to="'#links'" href="#links">
-            Links
-            <v-icon>mdi-magnify</v-icon>
-          </v-tab>
-          -->
+          </div>
         </v-tabs>
+
     </v-app-bar>
     </div>
+
+
+    <h2 :class="pc">
+      SenK's Portfolio
+    </h2>
+
+    <v-navigation-drawer
+        v-model="drawer"
+        fixed
+        temporary
+        hide-overlay
+        class="white--text"
+      >
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item>
+            SenK's Portfolio
+          </v-list-item>
+          <v-divider/>
+          <v-list-item-group
+            active-class="light-green--text text--accent-4"
+          >
+           <v-list-item v-for="info in tabInfo" :key="info.to_id" v-scroll-to="info.to_id" :href="info.url">
+              <v-list-item-icon>
+                <v-icon>{{ info.icon }}</v-icon>
+              </v-list-item-icon>
+              {{ info.subtitle }}
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+    </v-navigation-drawer>  
+
+   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
+  data:()=>({
+    smartphone:"d-flex d-sm-none",
+    pc:"d-none d-sm-flex",
+    drawer:false,
+    tabInfo:[
+    {
+      subtitle:"Top",
+      to_id:"#top",
+      url:"#",
+      icon:"mdi-home"
+    },
+    {
+      subtitle:"About Me",
+      to_id:"#aboutme",
+      url:"#aboutme",
+      icon:"mdi-account"
+    },
+    {
+      subtitle:"Skill Set",
+      to_id:"#skillset",
+      url:"#skillset",
+      icon:"mdi-monitor"
+    },
+    {
+      subtitle:"Activities",
+      to_id:"#activities",
+      url:"#activities",
+      icon:"mdi-account-multiple"
+    },
+    ],
+  }),
   methods:{
+    showList: function (){
+      this.drawer=!this.drawer;
+    },
   },
 }
 </script>
