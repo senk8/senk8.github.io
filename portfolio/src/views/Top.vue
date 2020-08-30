@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
   .title{
-    height: 10%;
+    height: 15%;
     background: #DCE35B;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

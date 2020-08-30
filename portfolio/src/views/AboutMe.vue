@@ -4,31 +4,19 @@
       <v-row cols="12">
       <v-col 
       align-self="center"
-      cols="4" 
-      offset="2" >
+      xs="12" 
+      md="4" 
+      offset-md="2" >
       <v-img
         src="@/assets/prof.jpg"
       ></v-img>
       </v-col>
-      <v-col cols="6" md="6">
-      <v-card-text class="text-caption">
-        <p class="text-h6">
-          名前:{{name}}
-        </p>
-        <p>
-          大学:{{university}}
-        </p>
-        <p>
-          専攻:{{major}}
-        </p>
-        <p>
-          ラボ:{{labo}}
-        </p>
-        <p>
-          研究:{{theme}}
-        </p>
-        <p>
-          関連リンクはページ最下にあります。          
+      <v-col 
+      md="6"
+      xs="12">
+      <v-card-text class="text-center text-md-h6 text-caption">
+        <p v-for="prof in profile" :key="prof.label">
+          {{prof.label}}:{{prof.text}}
         </p>
       </v-card-text>
       </v-col>
@@ -47,12 +35,32 @@ export default {
   data: () => ({
     id:"aboutme",
     subtitle:"About Me",
-    text:"",
-    name:"佐藤開智",
-    university:"法政大学大学院修士一年",
-    labo:"尾花研究室",
-    major:"情報科学",
-    theme:"マルチパーティ計算/秘密計算",
+    profile: [
+    {
+      label:"Name",
+      text:"佐藤開智（SenK）",
+    },
+    {
+      label:"Degree",
+      text:"法政大学大学院修士一年",
+    },
+    {
+      label:"Labo",
+      text:"尾花研究室",
+    },
+    { 
+      label:"Major",
+      text:"情報科学",
+    },
+    {
+      label:"Theme",
+      text:"マルチパーティ計算/秘密計算",
+    },
+    {
+      label:"Link",
+      text:"関連リンクはページ最下にあります。",
+    }
+    ]
   }),
   components:{
     SectionFrame,
