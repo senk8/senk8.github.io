@@ -8,9 +8,6 @@
       dark
     >
         <v-app-bar-nav-icon :class="smartphone" @click.stop="showList()"/>
-        <v-btn v-scroll-to="'#aboutme'" href="#aboutme">
-          aboutme
-        </v-btn> 
         <v-tabs 
         light-green
         icons-and-text
