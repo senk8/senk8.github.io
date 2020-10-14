@@ -38,7 +38,7 @@ export default {
     profile: [
     {
       label:"Name",
-      text:"佐藤開智（SenK）",
+      text:"SenK",
     },
     {
       label:"Degree",
