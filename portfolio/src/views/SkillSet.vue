@@ -29,7 +29,7 @@ export default {
     skills:[{language:"Python",icon_name:"mdi-language-python",description:"研究、バックエンドに使用"},
             {language:"Cython",icon_name:"mdi-language-python",description:"C++をPythonにラッピングするために使用"},
             {language:"C++",icon_name:"mdi-language-cpp",description:"競技プログラミング、実務用アルゴリズムの実装"},
-            {language:"Scala",icon_name:"mdi-language-java",description:"趣味言語1、アイコンは準備中"},
+            {language:"Rust",icon_name:"mdi-language-rust",description:"個人開発用の言語。最も力を入れている。"},
             {language:"Haskell",icon_name:"mdi-language-haskell",description:"趣味言語、いつか競プロに使いたい"},
             {language:"Vue.js",icon_name:"mdi-vuejs",description:"短期インターン、ポートフォリオサイトの作成"},
             {language:"HTML/CSS",icon_name:"mdi-language-html5",description:"短期インターン、ポートフォリオサイトの作成"},

@@ -4,23 +4,23 @@
     outlined 
     class="text-center">
       <v-card-text class="text-h4">
-      <v-icon>{{ icon_name }}</v-icon>
-      {{language}}
+      {{ title }}
       </v-card-text>
       <v-divider />
       <v-card-text>
-        <p>{{ description }}</p>
+        <p>{{ created_at }}</p>
       </v-card-text>
     </v-card>
 </template>
 
 <script>
 export default {
-  name: "SkillCard",
+  name: "PostCard",
   props: {
-    language:String,
-    description:String,
-    icon_name:String,
+    title:String,
+    url:String,
+    created_at:String,
+    likes_count:Number,
   }
 }
 </script>
