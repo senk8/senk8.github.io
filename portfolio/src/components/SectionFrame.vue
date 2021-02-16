@@ -14,9 +14,9 @@
 export default {
   name: "Section",
   props: {
-    id:"",
-    subtitle:"",
-    text:"",
+    id:String,
+    subtitle:String,
+    text:String,
   },
 }
 </script>
