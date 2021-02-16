@@ -20,6 +20,7 @@
       <v-card-text class="text-center white--text">
          <p>senk8421@gmail.com</p>
          <p><a href='https://qiita.com/SenK'>SenK - Qiita</a></p>
+         <p><a href='https://zenn.dev/senk'>Senkの記事一覧 - Zenn</a></p>
          <p><a href='https://tenn.hateblo.jp/'>暗号勉強会 - はてなブログ</a></p>
          <p><a href='https://atcoder.jp/users/Tenn'>Tenn - AtCoder</a></p>
       </v-card-text>

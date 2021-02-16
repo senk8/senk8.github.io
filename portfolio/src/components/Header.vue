@@ -68,30 +68,36 @@ export default {
     pc:"d-none d-sm-flex",
     drawer:false,
     tabInfo:[
-    {
-      subtitle:"Top",
-      to_id:"#top",
-      url:"#",
-      icon:"mdi-home"
-    },
-    {
-      subtitle:"About Me",
-      to_id:"#aboutme",
-      url:"#aboutme",
-      icon:"mdi-account"
-    },
-    {
-      subtitle:"Skill Set",
-      to_id:"#skillset",
-      url:"#skillset",
-      icon:"mdi-monitor"
-    },
-    {
-      subtitle:"Activities",
-      to_id:"#activities",
-      url:"#activities",
-      icon:"mdi-account-multiple"
-    },
+      {
+        subtitle:"Top",
+        to_id:"#top",
+        url:"#",
+        icon:"mdi-home"
+      },
+      {
+        subtitle:"About Me",
+        to_id:"#aboutme",
+        url:"#aboutme",
+        icon:"mdi-account"
+      },
+      {
+        subtitle:"Skill Set",
+        to_id:"#skillset",
+        url:"#skillset",
+        icon:"mdi-monitor"
+      },
+      {
+        subtitle:"Activities",
+        to_id:"#activities",
+        url:"#activities",
+        icon:"mdi-account-multiple"
+      },
+      {
+        subtitle:"Posts",
+        to_id:"#posts",
+        url:"#posts",
+        icon:"mdi-book"
+      },
     ],
   }),
   methods:{
