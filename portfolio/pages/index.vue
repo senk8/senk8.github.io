@@ -99,10 +99,10 @@ export default {
     data: () => ({
     }),
     async asyncData({ $axios }) {
-	    const sections = await $axios.$get("/json/sections.json");
-	    const profile = await $axios.$get("/json/profile.json");
-	    const activities = await $axios.$get("/json/activities.json");
-	    const skillset = await $axios.$get("/json/skillset.json");
+	    const sections = await $axios.$get("https://senk8.github.io/json/sections.json");
+	    const profile = await $axios.$get("https://senk8.github.io/json/profile.json");
+	    const activities = await $axios.$get("https://senk8.github.io/json/activities.json");
+	    const skillset = await $axios.$get("https://senk8.github.io/json/skillset.json");
 	    const posts = await $axios.$get("https://qiita.com/api/v2/users/SenK/items?page=1&per_page=10");
         posts.forEach( post =>
             {post.created_at = new Date(post.created_at)}
