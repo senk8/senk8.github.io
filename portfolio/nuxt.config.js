@@ -75,4 +75,8 @@ export default {
   generate: {
     dir: 'docs'
   },
+
+  router: {
+    base: '/senk8.github.io/'
+  },
 }
