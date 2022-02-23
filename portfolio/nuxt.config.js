@@ -77,6 +77,6 @@ export default {
   },
 
   router: {
-    base: '/senk8.github.io/'
+    base: '/'
   },
 }
