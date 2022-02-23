@@ -1,0 +1,22 @@
+{
+    "aboutme": {
+        "id":"aboutme",
+        "subtitle":"About Me",
+        "text": ""
+    },
+    "activities": {
+        "id": "activities",
+        "subtitle": "Activities",
+        "text": "下記のような活動の他に競技プログラミングや、はてなブログ・Qiitaでの技術記事の執筆を行っています。"
+    },
+    "skillset":{
+        "id":"skillset",
+        "subtitle":"Skill Set",
+        "text":"コンピュータにまつわるスキルを紹介します。"
+    },
+    "posts": { 
+        "id":"posts",
+        "subtitle":"Posts",
+        "text":"Qiitaでの最新記事10件を紹介しています。他のサービスでの投稿はページ下部のリンクよりご覧ください。"
+    }
+}

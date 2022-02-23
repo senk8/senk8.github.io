@@ -1,0 +1,26 @@
+[
+    {
+        "label":"Name",
+        "text":"Senk"
+    },
+    {
+        "label":"Degree",
+        "text":"法政大学大学院修士2年"
+    },
+    {
+        "label":"Labo",
+        "text":"尾花研究室"
+    },
+    { 
+        "label":"Major",
+        "text":"情報科学"
+    },
+    {
+        "label":"Theme",
+        "text":"秘密分散"
+    },
+    {
+        "label":"Link",
+        "text":"関連リンクはページ最下にあります。"
+    }
+]
